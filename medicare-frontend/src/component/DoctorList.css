@@ -1,0 +1,73 @@
+/* DoctorList.css */
+.doctors-card {
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  
+  .time-slots-container {
+    max-height: 600px;
+    overflow-y: auto;
+    padding-right: 8px;
+  }
+  
+  .time-slots-container::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .time-slots-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  .time-slots-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  
+  .time-slots-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  .time-slot-group {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+  }
+  
+  .time-slot-header {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .doctor-card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+  }
+  
+  .doctor-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .doctor-avatar {
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .doctor-rating {
+    color: #ffc107;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .time-slot-group {
+      padding: 0.75rem;
+    }
+    
+    .doctor-card {
+      margin-bottom: 1rem;
+    }
+  }

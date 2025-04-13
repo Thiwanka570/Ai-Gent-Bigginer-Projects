@@ -1,0 +1,164 @@
+/* Ensure parent container fills viewport */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #e5ddd5;
+  }
+  
+  /* Scrollable chat messages */
+  .chat-body {
+    padding: 1rem;
+    overflow-y: auto;
+    min-height: 84vh;
+    background-color: #f3f8f1;
+  }
+  
+  /* Message list styling */
+  .message-list {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    /* background-color: yellowgreen; */
+    min-height: 80vh;
+  }
+
+  
+  /* Message bubble base */
+  .message-bubble {
+    max-width: 75%;
+    padding: 0.6rem 1rem;
+    border-radius: 1rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  /* User message styling */
+  .message-bubble.user {
+    color: white;
+    background-color: #3d6421;
+    align-self: flex-end;
+    min-width: 200px;
+    border-bottom-right-radius: 0.25rem;
+  }
+  
+  /* Agent message styling */
+  .message-bubble.agent {
+    background-color: #fff;
+    color: rgb(0, 0, 0);
+    min-width: 200px;
+    border: 1px solid #ccc;
+    align-self: flex-start;
+    border-bottom-left-radius: 0.25rem;
+  }
+  
+  /* Sender name & timestamp */
+  .message-sender {
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    /* color: #000000; */
+  }
+  
+  .message-time {
+    font-size: 0.6rem;
+    text-align: right;
+    opacity: 0.6;
+    margin-top: 4px;
+  }
+  
+  /* Typing effect */
+  .typing-indicator {
+    display: flex;
+    padding: 0.5rem 0;
+  }
+  
+  .typing-indicator span {
+    width: 8px;
+    height: 8px;
+    background-color: #999;
+    border-radius: 50%;
+    margin: 0 2px;
+    animation: bounce 1.4s infinite ease-in-out both;
+  }
+  
+  .typing-indicator span:nth-child(1) {
+    animation-delay: -0.32s;
+  }
+  .typing-indicator span:nth-child(2) {
+    animation-delay: -0.16s;
+  }
+  
+  @keyframes bounce {
+    0%, 80%, 100% {
+      transform: translateY(0);
+      opacity: 0.5;
+    }
+    40% {
+      transform: translateY(-8px);
+      opacity: 1;
+    }
+  }
+  
+  /* Chat footer fixed at bottom */
+  .chat-footer {
+    background: #b6b8b6;
+    padding: 1rem;
+    border-top: 1px solid #ccc;
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Add these styles to your existing CSS */
+
+/* Scrollbar styling for WebKit browsers (Chrome, Safari) */
+.chat-body::-webkit-scrollbar,
+.message-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-body::-webkit-scrollbar-track,
+.message-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.chat-body::-webkit-scrollbar-thumb,
+.message-list::-webkit-scrollbar-thumb {
+  background: #3d6421aa; /* Semi-transparent green matching your theme */
+  border-radius: 4px;
+}
+
+.chat-body::-webkit-scrollbar-thumb:hover,
+.message-list::-webkit-scrollbar-thumb:hover {
+  background: #3d6421; /* Solid green on hover */
+}
+
+/* Scrollbar styling for Firefox */
+.chat-body,
+.message-list {
+  scrollbar-width: thin;
+  scrollbar-color: #3d6421aa #f1f1f1;
+}
+
+/* Existing styles remain below */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #e5ddd5;
+}
+/* ... rest of your existing styles ... */

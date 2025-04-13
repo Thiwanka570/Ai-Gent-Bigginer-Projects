@@ -42,61 +42,7 @@ This project is a Minimum Viable Product (MVP) that brings together AI-powered s
 
 ---
 
-## 📂 Project Structure
 
-```
-/client               # React frontend
-/server
-  /api                # Flask backend logic
-  /agents             # Gemini-based AI agents
-  /kafka              # Kafka producer/consumer scripts
-/database             # MongoDB connection and models
-/nginx                # Reverse proxy configuration
-```
-
----
-
-## 📦 Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/medical-ai-mvp.git
-   cd medical-ai-mvp
-   ```
-
-2. **Set up environment variables**
-   - Create a `.env` file in the `server` folder and add:
-     ```
-     MONGO_URI=your_mongo_connection_string
-     GEMINI_API_KEY=your_gemini_api_key
-     JWT_SECRET=your_jwt_secret
-     ```
-
-3. **Install dependencies**
-   ```bash
-   # Backend
-   cd server
-   pip install -r requirements.txt
-
-   # Frontend
-   cd ../client
-   npm install
-   ```
-
-4. **Run locally**
-   ```bash
-   # Run Kafka and MongoDB locally (Docker or manually)
-
-   # Backend
-   cd server
-   python app.py
-
-   # Frontend
-   cd ../client
-   npm start
-   ```
-
----
 
 ## 📌 Roadmap
 
